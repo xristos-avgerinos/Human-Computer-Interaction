@@ -10,3 +10,15 @@ C:\Users\Nasso\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.exe
 C:\Users\Nasso\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.pdb
 C:\Users\Nasso\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.Form3.resources
 C:\Users\Nasso\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.Form2.resources
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\bin\Debug\ErgasiaUI.exe.config
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\bin\Debug\ErgasiaUI.exe
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\bin\Debug\ErgasiaUI.pdb
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.csproj.AssemblyReference.cache
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.Form1.resources
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.Form2.resources
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.Form3.resources
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.Properties.Resources.resources
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.csproj.GenerateResource.cache
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.csproj.CoreCompileInputs.cache
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.exe
+C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.pdb
