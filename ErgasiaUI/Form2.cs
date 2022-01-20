@@ -16,10 +16,11 @@ namespace ErgasiaUI
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public Form2(String username)
         {
-            MessageBox.Show("aaaaaaaaa");
+            InitializeComponent();
+            label1.Text = "Welcome " + username;
         }
+
     }
 }
