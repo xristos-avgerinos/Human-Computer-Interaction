@@ -52,7 +52,7 @@
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(256, 32);
+            this.textBox2.Size = new System.Drawing.Size(256, 38);
             this.textBox2.TabIndex = 9;
             // 
             // label2
@@ -76,7 +76,7 @@
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 32);
+            this.textBox1.Size = new System.Drawing.Size(256, 38);
             this.textBox1.TabIndex = 7;
             // 
             // label1

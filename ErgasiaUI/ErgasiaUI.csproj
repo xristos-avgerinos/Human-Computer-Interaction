@@ -137,5 +137,29 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\rememberMe.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\backgroundform3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\box2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\signupF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\TemsAndconditions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\AlreadyHaveAccount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\signinF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\copyright.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

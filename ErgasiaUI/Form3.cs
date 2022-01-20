@@ -23,7 +23,8 @@ namespace ErgasiaUI
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             //Check if Username and Password are not null or contain space
             if (!string.IsNullOrEmpty(textBox1.Text) && !(textBox1.Text.Contains(" ")) && !string.IsNullOrEmpty(textBox2.Text) && !(textBox2.Text.Contains(" ")))
@@ -63,7 +64,6 @@ namespace ErgasiaUI
                 label4.ForeColor = Color.Red;
 
             }
-            
         }
     }
 }
