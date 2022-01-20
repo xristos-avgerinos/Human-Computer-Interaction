@@ -89,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,6 +103,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\white-curved.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\WelcomeBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\SignIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\curved14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\backgroundform1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\backgroundform2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\backgroundform1v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\signUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\dontHaveAnAccount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\rememberMe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
