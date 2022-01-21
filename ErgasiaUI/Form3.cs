@@ -13,6 +13,10 @@ namespace ErgasiaUI
 {
     public partial class Form3 : Form
     {
+        //Saving to DATABASE
+        String connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=UIdatabase.mdb";
+        OleDbConnection connection;
+        
         public Form3()
         {
             InitializeComponent();
@@ -20,6 +24,7 @@ namespace ErgasiaUI
 
         private void Form3_Load(object sender, EventArgs e)
         {
+             connection = new OleDbConnection(connectionString);
 
         }
 
@@ -29,9 +34,7 @@ namespace ErgasiaUI
             //Check if Username and Password are not null or contain space
             if (!string.IsNullOrEmpty(textBox1.Text) && !(textBox1.Text.Contains(" ")) && !string.IsNullOrEmpty(textBox2.Text) && !(textBox2.Text.Contains(" ")))
             {
-                //Saving to DATABASE
-                String connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=UIdatabase.mdb";
-                OleDbConnection connection = new OleDbConnection(connectionString);
+                
                 connection.Open();
 
 
