@@ -24,8 +24,6 @@ namespace ErgasiaUI
         private void Form1_Load(object sender, EventArgs e)
         {
             connection = new OleDbConnection(connectionString);
-            pictureBox4.ImageLocation = "Images/eye.png";
-            //pictureBox4.ImageLocation = "Images/visa.png";
         }
 
         private void button1_Click(object sender, EventArgs e)
