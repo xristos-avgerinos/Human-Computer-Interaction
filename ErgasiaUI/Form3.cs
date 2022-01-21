@@ -16,7 +16,7 @@ namespace ErgasiaUI
         //Saving to DATABASE
         String connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=UIdatabase.mdb";
         OleDbConnection connection;
-        
+        public bool eye_icon = false;
         public Form3()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace ErgasiaUI
         private void Form3_Load(object sender, EventArgs e)
         {
              connection = new OleDbConnection(connectionString);
-
+             
         }
 
 
@@ -80,6 +80,30 @@ namespace ErgasiaUI
 
             }
 
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (!eye_icon)
+            {
+                eye_icon = true;
+                pictureBox5.ImageLocation = "Images/eye.png";
+                textBox2.PasswordChar = '\0';
+            }
+            else
+            {
+                eye_icon = false;
+                pictureBox5.ImageLocation = "Images/no_eye.png";
+                textBox2.PasswordChar = '*';
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+            this.Close();
         }
     }
 }
