@@ -36,6 +36,7 @@
             this.dasdasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sdsdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sdsdaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,11 +101,21 @@
             this.sdsdaToolStripMenuItem1.Size = new System.Drawing.Size(49, 20);
             this.sdsdaToolStripMenuItem1.Text = "sdsda";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(465, 119);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1185, 685);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -129,5 +140,6 @@
         private System.Windows.Forms.ToolStripMenuItem dasdasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sdsdaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sdsdaToolStripMenuItem1;
+        private System.Windows.Forms.Button button4;
     }
 }
