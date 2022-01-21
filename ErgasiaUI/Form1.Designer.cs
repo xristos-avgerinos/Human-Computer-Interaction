@@ -54,10 +54,9 @@
             this.textBox2.ForeColor = System.Drawing.Color.DimGray;
             this.textBox2.Location = new System.Drawing.Point(95, 308);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(256, 38);
+            this.textBox2.Size = new System.Drawing.Size(256, 31);
             this.textBox2.TabIndex = 9;
             // 
             // label2
@@ -79,9 +78,8 @@
             this.textBox1.ForeColor = System.Drawing.Color.DimGray;
             this.textBox1.Location = new System.Drawing.Point(95, 205);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 38);
+            this.textBox1.Size = new System.Drawing.Size(256, 31);
             this.textBox1.TabIndex = 7;
             // 
             // label1
@@ -163,7 +161,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(356, 319);
+            this.pictureBox4.Location = new System.Drawing.Point(356, 311);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(26, 21);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -203,6 +201,7 @@
             // 
             // Form1
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
