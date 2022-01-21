@@ -31,8 +31,12 @@ namespace ErgasiaUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+
             //Check if Username and Password are not null or contain space
-            if (!string.IsNullOrEmpty(textBox1.Text) && !(textBox1.Text.Contains(" ")) && !string.IsNullOrEmpty(textBox2.Text) && !(textBox2.Text.Contains(" ")))
+            if (!string.IsNullOrEmpty(textBox1.Text) && !(textBox1.Text.Contains(" ")) && !string.IsNullOrEmpty(textBox2.Text) && !(textBox2.Text.Contains(" ")) && (checkBox1.Checked))
             {
                 
                 connection.Open();
@@ -48,16 +52,17 @@ namespace ErgasiaUI
 
                 connection.Close();
 
-                label4.Text = "Account Created Succesfully";
-                label4.ForeColor = Color.Green;
-                label4.Visible = true;
-
+                MessageBox.Show("Account was succesfully created!");
+                this.Hide();
+                Form2 form2 = new Form2();
+                form2.ShowDialog();
+                this.Close();
             }
             else if (string.IsNullOrEmpty(textBox1.Text) || textBox1.Text.Contains(" "))//Username is NULL or contains SPACE
             {
-                label4.Text = "Username is NULL or contains space";
-                label4.Visible = true;
-                label4.ForeColor = Color.Red;
+                label3.Text = "Username is NULL or contains space";
+                label3.Visible= true;
+                label3.ForeColor = Color.Red;
 
             }
             else if (string.IsNullOrEmpty(textBox2.Text) || textBox2.Text.Contains(" "))//Pass is NULL or contains SPACE 
@@ -67,6 +72,14 @@ namespace ErgasiaUI
                 label4.ForeColor = Color.Red;
 
             }
+            else if (!checkBox1.Checked)
+            {
+                label5.Text = "You have to agree with the Terms and Conditions";
+                label5.Visible = true;
+                label5.ForeColor = Color.Red;
+
+            }
+
         }
     }
 }

@@ -19,8 +19,12 @@ namespace ErgasiaUI
         public Form2(String username)
         {
             InitializeComponent();
-            label1.Text = "Welcome " + username;
+            
         }
 
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
