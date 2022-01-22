@@ -161,12 +161,59 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\copyright.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="bin\Debug\Images\vr-bg.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eye.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\no_eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Form2Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\widget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Plan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\devices.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\todo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Pet.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\weather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Messages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\emails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\spotify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProfilePictureMaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\signOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\notifications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\notification.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
