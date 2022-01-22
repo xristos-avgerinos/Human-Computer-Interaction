@@ -215,5 +215,14 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\notification.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\PlanYourDay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\ManageYourDevices.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\FeedYourPets.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
