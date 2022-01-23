@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace ErgasiaUI
 {
     public partial class Form3 : Form
     {
-        //Saving to DATABASE
+        
         String connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=UIdatabase.mdb";
         OleDbConnection connection;
         public bool eye_icon = false;
@@ -38,25 +39,35 @@ namespace ErgasiaUI
             //Check if Username and Password are not null or contain space
             if (!string.IsNullOrEmpty(textBox1.Text) && !(textBox1.Text.Contains(" ")) && !string.IsNullOrEmpty(textBox2.Text) && !(textBox2.Text.Contains(" ")) && (checkBox1.Checked))
             {
-                
-                connection.Open();
+                //Saving to DATABASE
+                try
+                {
+                    connection.Open();
 
+                    String Query = "INSERT INTO Users ([Username],[Password],[Picture]) VALUES (@name,@pass,@pic)";
+                    OleDbCommand cmd = new OleDbCommand(Query, connection);
 
-                String Query = "INSERT INTO Users ([Username],[Password]) VALUES (@name,@pass)";
-                OleDbCommand cmd = new OleDbCommand(Query, connection);
+                    cmd.Parameters.AddWithValue("@name", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@pass", textBox2.Text);
+                    cmd.Parameters.AddWithValue("@pic", "images\\user_icon.png");
+                    cmd.ExecuteNonQuery();
 
-                cmd.Parameters.AddWithValue("@name", textBox1.Text);
-                cmd.Parameters.AddWithValue("@pass", textBox2.Text);
-                cmd.ExecuteNonQuery();
+                    MessageBox.Show("Account was succesfully created!");
+                    this.Hide();
+                    Form2 form2 = new Form2(textBox1.Text, "images\\user_icon.png");
+                    form2.ShowDialog();
+                    this.Close();
+                }
+                catch (OleDbException ex) when (ex.ErrorCode == -2147467259)
+                {
+                    MessageBox.Show(" This username already exists. Please enter a different username ");
+                }
+                finally
+                {
+                    connection.Close();
+                }
+               
 
-
-                connection.Close();
-
-                MessageBox.Show("Account was succesfully created!");
-                this.Hide();
-                Form2 form2 = new Form2();
-                form2.ShowDialog();
-                this.Close();
             }
             else if (string.IsNullOrEmpty(textBox1.Text) || textBox1.Text.Contains(" "))//Username is NULL or contains SPACE
             {

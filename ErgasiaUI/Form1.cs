@@ -36,7 +36,7 @@ namespace ErgasiaUI
             {
 
                 connection.Open();
-                String query = "Select Username,Password From Users Where Username=@user and Password=@pass";
+                String query = "Select Username,Password,Picture From Users Where Username=@user and Password=@pass";
                 OleDbCommand command = new OleDbCommand(query, connection);
                 command.Parameters.AddWithValue("@user", textBox1.Text);
                 command.Parameters.AddWithValue("@pass", textBox2.Text);
@@ -44,7 +44,7 @@ namespace ErgasiaUI
                 if (reader.Read())
                 {
                     this.Hide();
-                    Form2 form2 = new Form2();
+                    Form2 form2 = new Form2(textBox1.Text, reader.GetString(2));
                     form2.ShowDialog();
                     this.Close();
                 }
