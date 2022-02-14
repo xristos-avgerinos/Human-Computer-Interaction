@@ -19,8 +19,7 @@ namespace ErgasiaUI
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'uIdatabaseDataSet.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.uIdatabaseDataSet.Users);
+            
 
         }
     }
