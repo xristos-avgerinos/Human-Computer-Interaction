@@ -249,10 +249,5 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\user_icon.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="UIdatabase.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
