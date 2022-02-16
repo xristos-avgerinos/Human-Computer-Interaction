@@ -69,20 +69,28 @@ namespace ErgasiaUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            String[] time1 = tableLayoutPanel1.GetControlFromPosition(2, 0).Text.Split('-');
-            DateTime firstActivityTime = DateTime.ParseExact(time1[0].Trim(), "HH:mm", CultureInfo.CurrentCulture);
-            time1 = tableLayoutPanel1.GetControlFromPosition(2, tableLayoutPanel1.RowCount-1).Text.Split('-');
-            DateTime lastActivityTime = DateTime.ParseExact(time1[1].Trim(), "HH:mm", CultureInfo.CurrentCulture);
+            TimeSpan difference;
+            if (tableLayoutPanel1.RowCount > 0)
+            {
+                String[] time1 = tableLayoutPanel1.GetControlFromPosition(2, 0).Text.Split('-');
+                DateTime firstActivityTime = DateTime.ParseExact(time1[0].Trim(), "HH:mm", CultureInfo.CurrentCulture);
+                time1 = tableLayoutPanel1.GetControlFromPosition(2, tableLayoutPanel1.RowCount - 1).Text.Split('-');
+                DateTime lastActivityTime = DateTime.ParseExact(time1[1].Trim(), "HH:mm", CultureInfo.CurrentCulture);
 
-            TimeSpan span1 = lastActivityTime.Subtract(firstActivityTime); //pairno thn diafora tis oras ekkinisis protis energeias kai termatismou teleytaias energeias oste na brethei posos xronos tis hmeras menei eleytheros
-            if (span1 <= new TimeSpan(00, 00, 00))
-                span1 += TimeSpan.FromHours(24);
+                TimeSpan span1 = lastActivityTime.Subtract(firstActivityTime); //pairno thn diafora tis oras ekkinisis protis energeias kai termatismou teleytaias energeias oste na brethei posos xronos tis hmeras menei eleytheros
+                if (span1 <= new TimeSpan(00, 00, 00))
+                    span1 += TimeSpan.FromHours(24);
 
-            TimeSpan difference = TimeSpan.FromHours(24) - span1;
+                difference = TimeSpan.FromHours(24) - span1;
 
-            //MessageBox.Show(dateTimePicker1.Value.TimeOfDay+ " ----------- "+ difference);
-            //MessageBox.Show((dateTimePicker1.Value.TimeOfDay - difference).ToString());
+                //MessageBox.Show(dateTimePicker1.Value.TimeOfDay+ " ----------- "+ difference);
+                //MessageBox.Show((dateTimePicker1.Value.TimeOfDay - difference).ToString());
+
+            }
+            else
+            {
+                difference = new TimeSpan(24, 00, 00);
+            }
 
             if ((radioButton4.Checked == false && radioButton5.Checked == false && radioButton6.Checked==false)||
                 (dateTimePicker1.Value.Hour == 00 && dateTimePicker1.Value.Minute == 00) ||
@@ -128,9 +136,11 @@ namespace ErgasiaUI
                 bool first_time = true;
                 int row_index = 0;
                 DateTime startTime = default(DateTime);
-                DateTime endTime = default(DateTime);
+                DateTime endTime = new DateTime(0001, 1, 1, 8, 0, 0);
+                
                 for (int row=0; row<tableLayoutPanel1.RowCount-1; row++)
                 {
+                    
                     String [] Time = tableLayoutPanel1.GetControlFromPosition(2, row).Text.Split('-'); //pairno se mia lista thn ora ekkinisis kai termatismou tis energeias sto sygkekrimno row
                     
                     startTime = DateTime.ParseExact(Time[0].Trim(), "HH:mm", CultureInfo.CurrentCulture);
