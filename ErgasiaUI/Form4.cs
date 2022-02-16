@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,34 +14,93 @@ namespace ErgasiaUI
     public partial class Form4 : Form
     {
         public static RowStyle rowStyle;
-
+        
         public Form4()
         {
             InitializeComponent();
-            //tableLayoutPanel1.Paint += tableLayoutPanel_Paint;
+            
             Form4.rowStyle = tableLayoutPanel1.RowStyles[tableLayoutPanel1.RowCount - 1]; 
+            
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
-           
+            //tableLayoutPanel1.Paint += tableLayoutPanel_Paint;
+
+            dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "HH:mm";
+            dateTimePicker1.Value = new DateTime(2015, 02, 19, 0, 0, 0);
+            dateTimePicker1.ShowUpDown = true;
+            dateTimePicker1.MouseWheel += new MouseEventHandler(dateTimePicker1_MouseWheel);
+            dateTimePicker1.KeyDown += new KeyEventHandler(dateTimePicker1_KeyDown);
+            dateTimePicker1.GotFocus += new EventHandler(dateTimePicker1_GotFocus);
+
         }
+        
+
+        void dateTimePicker1_GotFocus(object sender, EventArgs e)
+        {
+            SendKeys.Send("{right}");
+        }
+
+
+        void dateTimePicker1_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+                dateTimePicker1.Value = dateTimePicker1.Value.AddMinutes(1);
+            else
+                dateTimePicker1.Value = dateTimePicker1.Value.AddMinutes(-1);
+        }
+
+        void dateTimePicker1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 38)
+            {
+                dateTimePicker1.Value = dateTimePicker1.Value.AddMinutes(1);
+                e.SuppressKeyPress = true;
+            }
+            else if (e.KeyValue == 40)
+            {
+                dateTimePicker1.Value = dateTimePicker1.Value.AddMinutes(-1);
+                e.SuppressKeyPress = true;
+            }
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             
-            if((radioButton4.Checked == false && radioButton5.Checked == false && radioButton6.Checked==false)||
-                (numericUpDown1.Value == 0 ||
-                string.IsNullOrEmpty(textBox1.Text)))
+            String[] time1 = tableLayoutPanel1.GetControlFromPosition(2, 0).Text.Split('-');
+            DateTime firstActivityTime = DateTime.ParseExact(time1[0].Trim(), "HH:mm", CultureInfo.CurrentCulture);
+            time1 = tableLayoutPanel1.GetControlFromPosition(2, tableLayoutPanel1.RowCount-1).Text.Split('-');
+            DateTime lastActivityTime = DateTime.ParseExact(time1[1].Trim(), "HH:mm", CultureInfo.CurrentCulture);
+
+            TimeSpan span1 = lastActivityTime.Subtract(firstActivityTime); //pairno thn diafora tis oras ekkinisis protis energeias kai termatismou teleytaias energeias oste na brethei posos xronos tis hmeras menei eleytheros
+            if (span1 <= new TimeSpan(00, 00, 00))
+                span1 += TimeSpan.FromHours(24);
+
+            TimeSpan difference = TimeSpan.FromHours(24) - span1;
+
+            //MessageBox.Show(dateTimePicker1.Value.TimeOfDay+ " ----------- "+ difference);
+            //MessageBox.Show((dateTimePicker1.Value.TimeOfDay - difference).ToString());
+
+            if ((radioButton4.Checked == false && radioButton5.Checked == false && radioButton6.Checked==false)||
+                (dateTimePicker1.Value.Hour == 00 && dateTimePicker1.Value.Minute == 00) ||
+                string.IsNullOrEmpty(textBox1.Text))
             {
                 MessageBox.Show("You need to select both activity, transportation method and estimated time");
 
             }
+            else if ( dateTimePicker1.Value.TimeOfDay > difference)
+            {
+                MessageBox.Show("this activity with estimated time: " + dateTimePicker1.Value.TimeOfDay + "overflows your plan day");
+            }
             else
             {
+                
                 tableLayoutPanel1.RowCount++;
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(rowStyle.SizeType, rowStyle.Height));
-                //tableLayoutPanel1.Paint += tableLayoutPanel_Paint;
+                
                 //add six controls
                 Button button = new Button();
                 button.Size = button3.Size;
@@ -49,7 +109,7 @@ namespace ErgasiaUI
                 button.Click += button3_Click;
                 tableLayoutPanel1.Controls.Add(new PictureBox() { Size = pictureBox1.Size, Anchor = AnchorStyles.None }, 0, tableLayoutPanel1.RowCount - 1) ;
                 tableLayoutPanel1.Controls.Add(new Label() { Text = textBox1.Text, Size = label1.Size ,Anchor = AnchorStyles.None,TextAlign = ContentAlignment.MiddleCenter }, 1, tableLayoutPanel1.RowCount - 1);
-                tableLayoutPanel1.Controls.Add(new Label() { Text = numericUpDown1.Value.ToString(), Size = label1.Size, Anchor = AnchorStyles.None, TextAlign = ContentAlignment.MiddleCenter }, 2, tableLayoutPanel1.RowCount - 1);
+                tableLayoutPanel1.Controls.Add(new Label() { Size = label1.Size, Anchor = AnchorStyles.None, TextAlign = ContentAlignment.MiddleCenter }, 2, tableLayoutPanel1.RowCount - 1);
                 if (radioButton4.Checked)
                 {
                     tableLayoutPanel1.Controls.Add(new PictureBox() { Size = pictureBox1.Size, BackColor = Color.Red, Anchor = AnchorStyles.None }, 3, tableLayoutPanel1.RowCount - 1);
@@ -65,12 +125,72 @@ namespace ErgasiaUI
                 tableLayoutPanel1.Controls.Add(new PictureBox() { Size = pictureBox1.Size, Anchor = AnchorStyles.None }, 4, tableLayoutPanel1.RowCount - 1);
                 tableLayoutPanel1.Controls.Add(button, 5, tableLayoutPanel1.RowCount - 1);
 
+                bool first_time = true;
+                int row_index = 0;
+                DateTime startTime = default(DateTime);
+                DateTime endTime = default(DateTime);
+                for (int row=0; row<tableLayoutPanel1.RowCount-1; row++)
+                {
+                    String [] Time = tableLayoutPanel1.GetControlFromPosition(2, row).Text.Split('-'); //pairno se mia lista thn ora ekkinisis kai termatismou tis energeias sto sygkekrimno row
+                    
+                    startTime = DateTime.ParseExact(Time[0].Trim(), "HH:mm", CultureInfo.CurrentCulture);
+                    
+                    endTime = DateTime.ParseExact(Time[1].Trim(), "HH:mm", CultureInfo.CurrentCulture);
+                    
+                    TimeSpan span = endTime.Subtract(startTime); //pairno thn diafora tis oras ekkinisis-termatismou oste na brethei to estimated time tiw energeias
+                    
+                    if (span < new TimeSpan(00, 00, 00))
+                        span += TimeSpan.FromHours(24);
 
+                    //MessageBox.Show("Time Difference (minutes): " + span);
+                    if (dateTimePicker1.Value.TimeOfDay < span)
+                    {
+                        
+                        //an to estimated time tis neas eggrafis einai ligotero apo kapoia allh tiw kanei swap oste na ginei tajinomhsh me tin pio mikrh energeia se diarkeia
+                        SwapTwoRows(row, tableLayoutPanel1.RowCount - 1);
+                        if (first_time)
+                        {
+                            //thetoume thn trith sthlh tis neas eggrafis(diladi thn vra ekkinhshs-termatismoy) me to time poy prokiptei apo to teleytaio row pou elejame
+                            row_index = row;
+                            DateTime start = startTime.Subtract(dateTimePicker1.Value.TimeOfDay);
+                            DateTime end = startTime;
+                            String time = start.ToString("HH:mm", CultureInfo.CurrentCulture) + " - " + end.ToString("HH:mm", CultureInfo.CurrentCulture);
+                            tableLayoutPanel1.GetControlFromPosition(2, row).Text = time;
+                            first_time = false;
+                        }
+                    }
+                }
+                if (first_time)
+                {
+                    //an den mphke pote sto pano if shmainei oti den xriasthke na ginei kapoio swap ara h eggrafh prepei na meinei sthn teleytaia grammh opou kai brisketai kai allazoyme to time analoga me th timh ths proteleytaias eggrafhs
+                    DateTime start = endTime;
+                    DateTime end = endTime.Add(dateTimePicker1.Value.TimeOfDay);
+                    String time = start.ToString("HH:mm", CultureInfo.CurrentCulture) + " - " + end.ToString("HH:mm", CultureInfo.CurrentCulture);
+                    tableLayoutPanel1.GetControlFromPosition(2, tableLayoutPanel1.RowCount - 1).Text = time; 
+                }
+                else //diaforetika simainei oti mpike kapou endiamesa stis ypoloipes eggrafes opote afairei apo oles tis eggrafes poy proigoyntai to estimated time tis neas eggrafis oste na ginei sosta h anadiatajh 
+                {
+                    for (int row = 0; row < row_index; row++)
+                    {
+                        String[] Time = tableLayoutPanel1.GetControlFromPosition(2, row).Text.Split('-');
+
+                        startTime = DateTime.ParseExact(Time[0].Trim(), "HH:mm", CultureInfo.InvariantCulture);
+
+                        endTime = DateTime.ParseExact(Time[1].Trim(), "HH:mm", CultureInfo.InvariantCulture);
+
+                        startTime = startTime.Subtract(dateTimePicker1.Value.TimeOfDay);
+                        endTime = endTime.Subtract(dateTimePicker1.Value.TimeOfDay);
+                        String time = startTime.ToString("HH:mm", CultureInfo.CurrentCulture) + " - " + endTime.ToString("HH:mm", CultureInfo.CurrentCulture);
+                        tableLayoutPanel1.GetControlFromPosition(2, row).Text = time;
+                    }
+
+                }
+                
 
             }
+
             
-            
-            
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -120,9 +240,32 @@ namespace ErgasiaUI
         }
         private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
+            
+            e.Graphics.DrawRectangle(new Pen(Color.Blue), 1,1,875,53);
+        }
 
-            e.Graphics.DrawRectangle(new Pen(Color.Blue), 1,1,875,65);
+        private void SwapControls(TableLayoutPanel tlp, TableLayoutPanelCellPosition cpos1, TableLayoutPanelCellPosition cpos2)
+        {
+            var ctl1 = tlp.GetControlFromPosition(cpos1.Column, cpos1.Row);
+            var ctl2 = tlp.GetControlFromPosition(cpos2.Column, cpos2.Row);
+            if (ctl1 != null) // position1 can be empty
+                tlp.SetCellPosition(ctl1, cpos2);
+            if (ctl2 != null) // position2 can be empty
+                tlp.SetCellPosition(ctl2, cpos1);
+        }
 
+        private void SwapTwoRows(int row1, int row2)
+        {
+            SwapControls(tableLayoutPanel1, new TableLayoutPanelCellPosition(1, row1), new TableLayoutPanelCellPosition(1, row2));
+            SwapControls(tableLayoutPanel1, new TableLayoutPanelCellPosition(2, row1), new TableLayoutPanelCellPosition(2, row2));
+            SwapControls(tableLayoutPanel1, new TableLayoutPanelCellPosition(3, row1), new TableLayoutPanelCellPosition(3, row2));
+            SwapControls(tableLayoutPanel1, new TableLayoutPanelCellPosition(4, row1), new TableLayoutPanelCellPosition(4, row2));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }

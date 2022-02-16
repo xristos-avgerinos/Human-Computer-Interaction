@@ -249,5 +249,8 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\user_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\personal_assitant.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
