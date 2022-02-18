@@ -79,16 +79,16 @@ namespace ErgasiaUI
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form5 form5 = new Form5();
-            form5.ShowDialog();
+            Form6 form6 = new Form6();
+            form6.ShowDialog();
             this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form6 form6 = new Form6();
-            form6.ShowDialog();
+            Form7 form7 = new Form7();
+            form7.ShowDialog();
             this.Close();
         }
 
@@ -103,16 +103,16 @@ namespace ErgasiaUI
         private void manageYourDevicesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form5 form5 = new Form5();
-            form5.ShowDialog();
+            Form6 form6 = new Form6();
+            form6.ShowDialog();
             this.Close();
         }
 
         private void feedYourPetsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form6 form6 = new Form6();
-            form6.ShowDialog();
+            Form7 form7 = new Form7();
+            form7.ShowDialog();
             this.Close();
         }
 

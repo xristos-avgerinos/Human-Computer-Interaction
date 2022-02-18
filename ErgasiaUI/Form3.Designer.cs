@@ -79,6 +79,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Image = global::ErgasiaUI.Properties.Resources.no_eye;
             this.pictureBox5.Location = new System.Drawing.Point(256, 255);
             this.pictureBox5.Name = "pictureBox5";

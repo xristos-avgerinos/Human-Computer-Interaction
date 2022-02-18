@@ -113,9 +113,9 @@ namespace ErgasiaUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bar {
+        internal static System.Drawing.Bitmap BackToMainPage {
             get {
-                object obj = ResourceManager.GetObject("bar", resourceCulture);
+                object obj = ResourceManager.GetObject("BackToMainPage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace ErgasiaUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap box {
+        internal static System.Drawing.Bitmap bar {
             get {
-                object obj = ResourceManager.GetObject("box", resourceCulture);
+                object obj = ResourceManager.GetObject("bar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace ErgasiaUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap completedTasks {
+        internal static System.Drawing.Bitmap clio {
             get {
-                object obj = ResourceManager.GetObject("completedTasks", resourceCulture);
+                object obj = ResourceManager.GetObject("clio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,16 +196,6 @@ namespace ErgasiaUI.Properties {
         internal static System.Drawing.Bitmap curved14 {
             get {
                 object obj = ResourceManager.GetObject("curved14", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap DailyPlanBackground {
-            get {
-                object obj = ResourceManager.GetObject("DailyPlanBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,16 +296,6 @@ namespace ErgasiaUI.Properties {
         internal static System.Drawing.Bitmap form4background {
             get {
                 object obj = ResourceManager.GetObject("form4background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap form4panel {
-            get {
-                object obj = ResourceManager.GetObject("form4panel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -426,16 +406,6 @@ namespace ErgasiaUI.Properties {
         internal static System.Drawing.Bitmap personal_assistan2 {
             get {
                 object obj = ResourceManager.GetObject("personal_assistan2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap personal_assitant {
-            get {
-                object obj = ResourceManager.GetObject("personal_assitant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -563,16 +533,6 @@ namespace ErgasiaUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap steps {
-            get {
-                object obj = ResourceManager.GetObject("steps", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap TemsAndconditions {
             get {
                 object obj = ResourceManager.GetObject("TemsAndconditions", resourceCulture);
@@ -616,16 +576,6 @@ namespace ErgasiaUI.Properties {
         internal static System.Drawing.Bitmap user_icon {
             get {
                 object obj = ResourceManager.GetObject("user_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap vr_bg {
-            get {
-                object obj = ResourceManager.GetObject("vr-bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

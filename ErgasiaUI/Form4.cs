@@ -402,5 +402,13 @@ namespace ErgasiaUI
         {
             MessageBox.Show("Hello.I am Clio your virtual assistant.Let's create your daily plan!");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+            this.Close();
+        }
     }
 }

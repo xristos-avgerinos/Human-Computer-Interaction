@@ -164,6 +164,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = global::ErgasiaUI.Properties.Resources.no_eye;
             this.pictureBox4.Location = new System.Drawing.Point(324, 308);
             this.pictureBox4.Name = "pictureBox4";
