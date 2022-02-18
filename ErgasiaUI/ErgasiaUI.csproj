@@ -282,5 +282,53 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\planer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\form4background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\4panelbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\AddActivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\ActivityName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\EstimatedTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\TransportationMethod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\WalkTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\driveTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\MeansOfTransport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\form4panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\personal_assistan2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\HelloIAm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\completedTasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\steps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\previous.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -107,12 +107,12 @@ namespace ErgasiaUI
                 (dateTimePicker1.Value.Hour == 00 && dateTimePicker1.Value.Minute == 00) ||
                 string.IsNullOrEmpty(textBox1.Text))
             {
-                MessageBox.Show("You need to select both activity, transportation method and estimated time");
+                MessageBox.Show("Please select activity,estimated time and transportaion method");
 
             }
             else if ( dateTimePicker1.Value.TimeOfDay > difference)
             {
-                MessageBox.Show("this activity with estimated time: " + dateTimePicker1.Value.TimeOfDay + "overflows your plan day");
+                MessageBox.Show("Activity with estimated time: " + dateTimePicker1.Value.TimeOfDay + "overflows your daily plan");
             }
             else
             {
@@ -127,6 +127,9 @@ namespace ErgasiaUI
                 button.Anchor = AnchorStyles.None;
                 button.BackgroundImage = button3.BackgroundImage;
                 button.BackgroundImageLayout = button3.BackgroundImageLayout;
+                button.Cursor = button3.Cursor;
+                button.FlatStyle = button3.FlatStyle;
+                button.ForeColor = button3.ForeColor;
                 button.Click += button3_Click;
                 //1
                 tableLayoutPanel1.Controls.Add(new PictureBox() { 
@@ -167,6 +170,7 @@ namespace ErgasiaUI
                     PictureBox pictureBox = new PictureBox()
                     {
                         Size = pictureBox3.Size,
+                        Cursor = pictureBox3.Cursor,
                         ImageLocation = "Images/walk"+random.Next(1,3).ToString()+random.Next(1,4).ToString()+".png",
                         SizeMode = pictureBox3.SizeMode,
                         Anchor = AnchorStyles.None
@@ -189,6 +193,7 @@ namespace ErgasiaUI
                     PictureBox pictureBox = new PictureBox()
                     {
                         Size = pictureBox3.Size,
+                        Cursor = pictureBox3.Cursor,
                         ImageLocation = "Images/car" + random.Next(3, 5).ToString() + random.Next(1, 4).ToString() + ".png",
                         SizeMode = pictureBox3.SizeMode,
                         Anchor = AnchorStyles.None
@@ -211,6 +216,7 @@ namespace ErgasiaUI
                     PictureBox pictureBox = new PictureBox()
                     {
                         Size = pictureBox3.Size,
+                        Cursor = pictureBox3.Cursor,
                         ImageLocation = "Images/trans" + random.Next(5, 7).ToString() + random.Next(1, 4).ToString() + ".png",
                         SizeMode = pictureBox3.SizeMode,
                         Anchor = AnchorStyles.None
@@ -390,6 +396,11 @@ namespace ErgasiaUI
             Form4.imageloc = pictureBox.ImageLocation;
             Form5 form5 = new Form5();
             form5.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello.I am Clio your virtual assistant.Let's create your daily plan!");
         }
     }
 }

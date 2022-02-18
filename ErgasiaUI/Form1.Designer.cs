@@ -165,9 +165,9 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Image = global::ErgasiaUI.Properties.Resources.no_eye;
-            this.pictureBox4.Location = new System.Drawing.Point(356, 313);
+            this.pictureBox4.Location = new System.Drawing.Point(324, 308);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 21);
+            this.pictureBox4.Size = new System.Drawing.Size(27, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 18;
             this.pictureBox4.TabStop = false;

@@ -67,5 +67,10 @@ namespace ErgasiaUI
 
             }
         }
+
+        private void Form5_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MessageBox.Show("You have successfully selected a route.");
+        }
     }
 }
