@@ -14,19 +14,29 @@ namespace ErgasiaUI
     public partial class Form4 : Form
     {
         public static RowStyle rowStyle;
+        Random random;
+        public static String imageloc;
+        public static PictureBox box;
+        
+       
+        
         
         public Form4()
         {
             InitializeComponent();
             
-            Form4.rowStyle = tableLayoutPanel1.RowStyles[tableLayoutPanel1.RowCount - 1]; 
-            
+            Form4.rowStyle = tableLayoutPanel1.RowStyles[tableLayoutPanel1.RowCount - 1];
+            timer1.Enabled = true;
+            label11.Text = DateTime.Now.ToString("HH:mm:ss");
+
+
+
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
             //tableLayoutPanel1.Paint += tableLayoutPanel_Paint;
-
+            pictureBox3.ImageLocation = "Images/car43.png";
             dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "HH:mm";
             dateTimePicker1.Value = new DateTime(2015, 02, 19, 0, 0, 0);
@@ -90,6 +100,7 @@ namespace ErgasiaUI
             else
             {
                 difference = new TimeSpan(24, 00, 00);
+                
             }
 
             if ((radioButton4.Checked == false && radioButton5.Checked == false && radioButton6.Checked==false)||
@@ -110,27 +121,105 @@ namespace ErgasiaUI
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(rowStyle.SizeType, rowStyle.Height));
                 
                 //add six controls
+                //init 6
                 Button button = new Button();
                 button.Size = button3.Size;
                 button.Anchor = AnchorStyles.None;
-                //button.BackgroundImage = button3.BackgroundImage;
+                button.BackgroundImage = button3.BackgroundImage;
+                button.BackgroundImageLayout = button3.BackgroundImageLayout;
                 button.Click += button3_Click;
-                tableLayoutPanel1.Controls.Add(new PictureBox() { Size = pictureBox1.Size, Anchor = AnchorStyles.None }, 0, tableLayoutPanel1.RowCount - 1) ;
-                tableLayoutPanel1.Controls.Add(new Label() { Text = textBox1.Text, Size = label1.Size ,Anchor = AnchorStyles.None,TextAlign = ContentAlignment.MiddleCenter }, 1, tableLayoutPanel1.RowCount - 1);
-                tableLayoutPanel1.Controls.Add(new Label() { Size = label1.Size, Anchor = AnchorStyles.None, TextAlign = ContentAlignment.MiddleCenter }, 2, tableLayoutPanel1.RowCount - 1);
+                //1
+                tableLayoutPanel1.Controls.Add(new PictureBox() { 
+                    Size = pictureBox1.Size,
+                    BackgroundImage = pictureBox1.BackgroundImage,
+                    BackgroundImageLayout = pictureBox1.BackgroundImageLayout,
+                    Anchor = AnchorStyles.None 
+                }, 0, tableLayoutPanel1.RowCount - 1) ;
+                //2
+                tableLayoutPanel1.Controls.Add(new Label() { 
+                    Text = textBox1.Text,
+                    Size = label1.Size ,
+                    Font = label1.Font,
+                    Anchor = AnchorStyles.None,
+                    TextAlign = ContentAlignment.MiddleCenter
+                }, 1, tableLayoutPanel1.RowCount - 1);
+                //3
+                tableLayoutPanel1.Controls.Add(new Label() { 
+                    Size = label2.Size,
+                    Font = label2.Font,
+                    Anchor = AnchorStyles.None, 
+                    TextAlign = ContentAlignment.MiddleCenter 
+                }, 2, tableLayoutPanel1.RowCount - 1);
+
+                random = new Random();
+                //4,5
+                //walk
                 if (radioButton4.Checked)
                 {
-                    tableLayoutPanel1.Controls.Add(new PictureBox() { Size = pictureBox1.Size, BackColor = Color.Red, Anchor = AnchorStyles.None }, 3, tableLayoutPanel1.RowCount - 1);
+
+                    tableLayoutPanel1.Controls.Add(new PictureBox()
+                    {
+                        Size = pictureBox2.Size,
+                        ImageLocation = "Images/walk.png",
+                        SizeMode = pictureBox2.SizeMode,
+                        Anchor = AnchorStyles.None
+                    }, 3, tableLayoutPanel1.RowCount - 1);
+                    PictureBox pictureBox = new PictureBox()
+                    {
+                        Size = pictureBox3.Size,
+                        ImageLocation = "Images/walk"+random.Next(1,3).ToString()+random.Next(1,4).ToString()+".png",
+                        SizeMode = pictureBox3.SizeMode,
+                        Anchor = AnchorStyles.None
+                       
+                    };
+                    pictureBox.Click += pictureBox3_Click;
+                    tableLayoutPanel1.Controls.Add(pictureBox, 4, tableLayoutPanel1.RowCount - 1);
                 }
+                //drive
                 else if (radioButton5.Checked)
                 {
-                    tableLayoutPanel1.Controls.Add(new PictureBox() { Size = pictureBox1.Size, BackColor = Color.Blue, Anchor = AnchorStyles.None }, 3, tableLayoutPanel1.RowCount - 1);
+                    tableLayoutPanel1.Controls.Add(new PictureBox()
+                    {
+                        Size = pictureBox2.Size,
+                        ImageLocation = "Images/car.png",
+                        SizeMode = pictureBox2.SizeMode,
+                        Anchor = AnchorStyles.None
+                    }, 3, tableLayoutPanel1.RowCount - 1);
+
+                    PictureBox pictureBox = new PictureBox()
+                    {
+                        Size = pictureBox3.Size,
+                        ImageLocation = "Images/car" + random.Next(3, 5).ToString() + random.Next(1, 4).ToString() + ".png",
+                        SizeMode = pictureBox3.SizeMode,
+                        Anchor = AnchorStyles.None
+
+                    };
+                    pictureBox.Click += pictureBox3_Click;
+                    tableLayoutPanel1.Controls.Add(pictureBox, 4, tableLayoutPanel1.RowCount - 1);
                 }
+                //trans
                 else if (radioButton6.Checked)
                 {
-                    tableLayoutPanel1.Controls.Add(new PictureBox() { Size = pictureBox1.Size, BackColor = Color.Yellow, Anchor = AnchorStyles.None }, 3, tableLayoutPanel1.RowCount - 1);
+                    tableLayoutPanel1.Controls.Add(new PictureBox()
+                    {
+                        Size = pictureBox2.Size,
+                        ImageLocation = "Images/train.png",
+                        SizeMode = pictureBox2.SizeMode,
+                        Anchor = AnchorStyles.None
+                    }, 3, tableLayoutPanel1.RowCount - 1);
+
+                    PictureBox pictureBox = new PictureBox()
+                    {
+                        Size = pictureBox3.Size,
+                        ImageLocation = "Images/trans" + random.Next(5, 7).ToString() + random.Next(1, 4).ToString() + ".png",
+                        SizeMode = pictureBox3.SizeMode,
+                        Anchor = AnchorStyles.None
+
+                    };
+                    pictureBox.Click += pictureBox3_Click;
+                    tableLayoutPanel1.Controls.Add(pictureBox, 4, tableLayoutPanel1.RowCount - 1);
                 }
-                tableLayoutPanel1.Controls.Add(new PictureBox() { Size = pictureBox1.Size, Anchor = AnchorStyles.None }, 4, tableLayoutPanel1.RowCount - 1);
+                //6
                 tableLayoutPanel1.Controls.Add(button, 5, tableLayoutPanel1.RowCount - 1);
 
                 bool first_time = true;
@@ -276,6 +365,31 @@ namespace ErgasiaUI
         {
             
             
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label11.Text = DateTime.Now.ToString("HH:mm:ss");
+            if (tableLayoutPanel1.RowCount == 0)
+            {
+                pictureBox7.Visible = true;
+                tableLayoutPanel1.BackColor = Color.Transparent;
+            }
+            else
+            {
+                pictureBox7.Visible = false;
+                tableLayoutPanel1.BackColor = Color.White;
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            //Control ctrl = (Control)sender;
+            PictureBox pictureBox = (PictureBox)sender;
+            Form4.box = pictureBox;
+            Form4.imageloc = pictureBox.ImageLocation;
+            Form5 form5 = new Form5();
+            form5.Show();
         }
     }
 }

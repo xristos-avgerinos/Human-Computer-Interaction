@@ -252,5 +252,35 @@
   <ItemGroup>
     <None Include="bin\Debug\Images\personal_assitant.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\DailyPlanBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\walk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\car43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\walk22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\planer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
