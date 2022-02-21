@@ -18,9 +18,6 @@ namespace ErgasiaUI
         public static String imageloc;
         public static PictureBox box;
         
-       
-        
-        
         public Form4()
         {
             InitializeComponent();

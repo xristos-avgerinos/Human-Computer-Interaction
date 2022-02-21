@@ -89,6 +89,12 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -344,6 +353,108 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Images\BackToMainPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\petbackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\cat-modified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\dog-modified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\bunny-modified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\bunny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\dog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\gatos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\skulos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\koyneli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\lucy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\oscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\todd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\lucyd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\oscard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Toddd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\WatchLive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\LivingRoom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Bedroom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Kitchen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\Bedroom.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\LivingRoom.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\home3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\petspotted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\food2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\water2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\consumption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\refillwater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\refillfood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\refillall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\PetActivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\GoBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\live.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

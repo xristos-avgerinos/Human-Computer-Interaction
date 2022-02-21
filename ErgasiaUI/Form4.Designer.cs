@@ -335,6 +335,7 @@ namespace ErgasiaUI
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Lucida Fax", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(240, 649);
+            this.textBox1.MaxLength = 20;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(289, 25);
             this.textBox1.TabIndex = 17;
@@ -488,6 +489,7 @@ namespace ErgasiaUI
             // 
             this.button2.BackgroundImage = global::ErgasiaUI.Properties.Resources.BackToMainPage;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Location = new System.Drawing.Point(1040, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 36);
