@@ -13,6 +13,7 @@ namespace ErgasiaUI
 {
     public partial class Form4 : Form
     {
+        public static TimeSpan activitiesSumTime = new TimeSpan(00, 30, 00);
         public static RowStyle rowStyle;
         Random random;
         public static String imageloc;
@@ -77,6 +78,7 @@ namespace ErgasiaUI
         private void button1_Click(object sender, EventArgs e)
         {
             TimeSpan difference;
+            TimeSpan span1;
             if (tableLayoutPanel1.RowCount > 0)
             {
                 String[] time1 = tableLayoutPanel1.GetControlFromPosition(2, 0).Text.Split('-');
@@ -84,20 +86,20 @@ namespace ErgasiaUI
                 time1 = tableLayoutPanel1.GetControlFromPosition(2, tableLayoutPanel1.RowCount - 1).Text.Split('-');
                 DateTime lastActivityTime = DateTime.ParseExact(time1[1].Trim(), "HH:mm", CultureInfo.CurrentCulture);
 
-                TimeSpan span1 = lastActivityTime.Subtract(firstActivityTime); //pairno thn diafora tis oras ekkinisis protis energeias kai termatismou teleytaias energeias oste na brethei posos xronos tis hmeras menei eleytheros
+                span1 = lastActivityTime.Subtract(firstActivityTime); //pairno thn diafora tis oras ekkinisis protis energeias kai termatismou teleytaias energeias oste na brethei posos xronos tis hmeras menei eleytheros
                 if (span1 <= new TimeSpan(00, 00, 00))
                     span1 += TimeSpan.FromHours(24);
 
                 difference = TimeSpan.FromHours(24) - span1;
 
-                //MessageBox.Show(dateTimePicker1.Value.TimeOfDay+ " ----------- "+ difference);
+                //MessageBox.Show(span1.ToString());
                 //MessageBox.Show((dateTimePicker1.Value.TimeOfDay - difference).ToString());
 
             }
             else
             {
                 difference = new TimeSpan(24, 00, 00);
-                
+                span1 = new TimeSpan(00, 00, 00);
             }
 
             if ((radioButton4.Checked == false && radioButton5.Checked == false && radioButton6.Checked==false)||
@@ -113,7 +115,8 @@ namespace ErgasiaUI
             }
             else
             {
-                
+                activitiesSumTime = span1.Add(dateTimePicker1.Value.TimeOfDay);
+
                 tableLayoutPanel1.RowCount++;
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(rowStyle.SizeType, rowStyle.Height));
                 
@@ -406,6 +409,11 @@ namespace ErgasiaUI
             Form2 form2 = new Form2();
             form2.ShowDialog();
             this.Close();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

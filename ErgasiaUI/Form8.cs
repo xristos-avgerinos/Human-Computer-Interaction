@@ -36,6 +36,15 @@ namespace ErgasiaUI
             pictureBox3.ImageLocation = "Images/food" + random.Next(1, 6).ToString() + ".png";
             pictureBox4.ImageLocation = "Images/water" + random.Next(1, 6).ToString() + ".png";
             await Task.Delay(300);
+            if(Form4.activitiesSumTime > new TimeSpan(08, 00, 00))
+            {
+                DialogResult dialogResult = MessageBox.Show("It seems your daily plan activities are overflowing 8 hours.Do you wish to turn autofeed on?","Attention", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    checkBox1.Checked = true;
+                }
+          
+            }
             if ((pictureBox3.ImageLocation == "Images/food1.png") && (pictureBox4.ImageLocation == "Images/water1.png"))
             {
                 DialogResult dialogResult = MessageBox.Show("Food and water amount is low.Do you wish to refill?", "Attention!", MessageBoxButtons.YesNo);

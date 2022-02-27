@@ -484,6 +484,7 @@ namespace ErgasiaUI
             this.pictureBox6.Size = new System.Drawing.Size(149, 46);
             this.pictureBox6.TabIndex = 35;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // button2
             // 

@@ -47,6 +47,7 @@ namespace ErgasiaUI
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -259,6 +260,16 @@ namespace ErgasiaUI
             this.pictureBox10.TabIndex = 43;
             this.pictureBox10.TabStop = false;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(1035, 406);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(68, 17);
+            this.checkBox1.TabIndex = 44;
+            this.checkBox1.Text = "autofeed";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +278,7 @@ namespace ErgasiaUI
             this.BackgroundImage = global::ErgasiaUI.Properties.Resources.petbackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1236, 764);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox9);
@@ -320,5 +332,6 @@ namespace ErgasiaUI
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
