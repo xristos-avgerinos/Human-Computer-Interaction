@@ -15,8 +15,8 @@ namespace ErgasiaUI
     {
         String connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=UIdatabase.mdb";
         OleDbConnection connection;
-        String Username;
-        String Picture;
+        public static String Username;
+        public static String Picture;
         public Form2()
         {
             InitializeComponent();

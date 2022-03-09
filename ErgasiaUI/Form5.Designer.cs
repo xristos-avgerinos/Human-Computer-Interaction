@@ -48,11 +48,12 @@ namespace ErgasiaUI
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = global::ErgasiaUI.Properties.Resources.next;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(925, 681);
+            this.button1.Location = new System.Drawing.Point(932, 681);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 67);
+            this.button1.Size = new System.Drawing.Size(184, 69);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -62,11 +63,12 @@ namespace ErgasiaUI
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = global::ErgasiaUI.Properties.Resources.previous;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(74, 681);
+            this.button2.Location = new System.Drawing.Point(75, 681);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(206, 69);
+            this.button2.Size = new System.Drawing.Size(209, 69);
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Visible = false;
@@ -106,9 +108,10 @@ namespace ErgasiaUI
             // 
             // pictureBox12
             // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.BackgroundImage = global::ErgasiaUI.Properties.Resources.copyright;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox12.Location = new System.Drawing.Point(432, 730);
+            this.pictureBox12.Location = new System.Drawing.Point(459, 729);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(276, 72);
             this.pictureBox12.TabIndex = 32;
@@ -142,7 +145,7 @@ namespace ErgasiaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::ErgasiaUI.Properties.Resources.form4background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1144, 804);

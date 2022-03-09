@@ -68,3 +68,8 @@ C:\Users\Nasso\Source\Repos\ErgasiaUIv2\ErgasiaUI\obj\Debug\ErgasiaUI.Form7.reso
 C:\Users\Nasso\Source\Repos\ErgasiaUIv2\ErgasiaUI\obj\Debug\ErgasiaUI.Form8.resources
 C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.Form7.resources
 C:\VisualStudio\source\repos\ErgasiaUI\ErgasiaUI\obj\Debug\ErgasiaUI.Form8.resources
+C:\Users\Nasso\Source\Repos\ErgasiaUIv2\ErgasiaUI\obj\Debug\ErgasiaUI.Form9.resources
+C:\Users\Nasso\Source\Repos\ErgasiaUIv2\ErgasiaUI\obj\Debug\ErgasiaUI.Form10.resources
+C:\Users\Nasso\Source\Repos\ErgasiaUIv2\ErgasiaUI\obj\Debug\ErgasiaUI.Form11.resources
+C:\Users\Nasso\Source\Repos\ErgasiaUIv2\ErgasiaUI\obj\Debug\ErgasiaUI.Form12.resources
+C:\Users\Nasso\Source\Repos\ErgasiaUIv2\ErgasiaUI\obj\Debug\ErgasiaUI.Form13.resources

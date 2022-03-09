@@ -8,6 +8,7 @@ namespace ErgasiaUI
 {
     static class Program
     {
+        public static List<string> Activities = new List<string>();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

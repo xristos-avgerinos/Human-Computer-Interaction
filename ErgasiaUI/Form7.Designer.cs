@@ -181,7 +181,7 @@ namespace ErgasiaUI
             this.pictureBox10.BackgroundImage = global::ErgasiaUI.Properties.Resources.clio;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox10.Location = new System.Drawing.Point(1030, 190);
+            this.pictureBox10.Location = new System.Drawing.Point(32, 137);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(149, 46);
             this.pictureBox10.TabIndex = 37;
@@ -193,7 +193,7 @@ namespace ErgasiaUI
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox11.Image = global::ErgasiaUI.Properties.Resources.personal_assistan2;
-            this.pictureBox11.Location = new System.Drawing.Point(1030, 87);
+            this.pictureBox11.Location = new System.Drawing.Point(32, 34);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(149, 104);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

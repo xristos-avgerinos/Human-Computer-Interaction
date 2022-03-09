@@ -22,7 +22,7 @@ namespace ErgasiaUI
         public Form4()
         {
             InitializeComponent();
-            
+            Program.Activities.Add("ΚΑΦΕΣ");
             Form4.rowStyle = tableLayoutPanel1.RowStyles[tableLayoutPanel1.RowCount - 1];
             timer1.Enabled = true;
             label11.Text = DateTime.Now.ToString("HH:mm:ss");
@@ -115,6 +115,7 @@ namespace ErgasiaUI
             }
             else
             {
+                Program.Activities.Add(textBox1.Text);
                 activitiesSumTime = span1.Add(dateTimePicker1.Value.TimeOfDay);
 
                 tableLayoutPanel1.RowCount++;
@@ -202,7 +203,7 @@ namespace ErgasiaUI
                     pictureBox.Click += pictureBox3_Click;
                     tableLayoutPanel1.Controls.Add(pictureBox, 4, tableLayoutPanel1.RowCount - 1);
                 }
-                //trans
+                //transport
                 else if (radioButton6.Checked)
                 {
                     tableLayoutPanel1.Controls.Add(new PictureBox()

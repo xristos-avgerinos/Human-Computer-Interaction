@@ -53,6 +53,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10.Designer.cs">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11.Designer.cs">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12.Designer.cs">
+      <DependentUpon>Form12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13.Designer.cs">
+      <DependentUpon>Form13.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,10 +119,29 @@
     <Compile Include="Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10.resx">
+      <DependentUpon>Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11.resx">
+      <DependentUpon>Form11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12.resx">
+      <DependentUpon>Form12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form13.resx">
+      <DependentUpon>Form13.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -120,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form8.resx">
       <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -455,6 +501,165 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Images\live.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\form6background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\temp.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\shoes.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\light.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\manageLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\manageTemp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\manageShoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\kitchenW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\living.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\LivingW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\kitchen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\bedroomW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\form9background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\temperature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\temperatureOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\mode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\FlowRate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\OR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\selectone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\lightsOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\brightness.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\changeColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\changeBrightness.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\shocaseClosed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\shocaseOpened.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\bedroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\BuyShoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\activityRecomm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\athlitika1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\pantofles1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\moka1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\sneaker1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\selectActivity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\selectImportance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\athlitika2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\moka2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\pantofles2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\sneaker2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\reccomendedShoes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\buySelectedItems.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\eshop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\AutoFeedOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Images\AutoFeedOn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -123,9 +123,9 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::ErgasiaUI.Properties.Resources.copyright;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(366, 627);
+            this.pictureBox5.Location = new System.Drawing.Point(431, 637);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(494, 58);
+            this.pictureBox5.Size = new System.Drawing.Size(367, 50);
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
             // 
@@ -213,10 +213,11 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::ErgasiaUI.Properties.Resources.help;
-            this.pictureBox6.Location = new System.Drawing.Point(966, 12);
+            this.pictureBox6.Location = new System.Drawing.Point(970, 12);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(44, 41);
+            this.pictureBox6.Size = new System.Drawing.Size(40, 35);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;

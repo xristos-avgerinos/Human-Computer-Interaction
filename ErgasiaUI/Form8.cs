@@ -31,6 +31,7 @@ namespace ErgasiaUI
 
         private async void Form8_Load(object sender, EventArgs e)
         {
+            pictureBox6.ImageLocation = "Images/AutoFeedOff.png";
             random = new Random();
             pictureBox1.ImageLocation = "Images/home"+random.Next(1,4).ToString()+".png";
             pictureBox3.ImageLocation = "Images/food" + random.Next(1, 6).ToString() + ".png";
@@ -41,7 +42,11 @@ namespace ErgasiaUI
                 DialogResult dialogResult = MessageBox.Show("It seems your daily plan activities are overflowing 8 hours.Do you wish to turn autofeed on?","Attention", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    checkBox1.Checked = true;
+                    pictureBox6.ImageLocation = "Images/AutoFeedOn.png";
+                }
+                else
+                {
+                    pictureBox6.ImageLocation = "Images/AutoFeedOff.png";
                 }
           
             }
@@ -151,6 +156,18 @@ namespace ErgasiaUI
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            if (pictureBox6.ImageLocation.Equals("Images/AutoFeedOff.png"))
+            {
+                pictureBox6.ImageLocation = "Images/AutoFeedOn.png";
+            }
+            else
+            {
+                pictureBox6.ImageLocation = "Images/AutoFeedOff.png";
+            }
         }
     }
 }
