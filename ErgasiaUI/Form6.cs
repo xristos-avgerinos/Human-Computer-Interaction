@@ -53,5 +53,10 @@ namespace ErgasiaUI
             form11.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"helpscribble\imgs\ergasia.chm", HelpNavigator.Topic, "html\\hs14.htm");
+        }
     }
 }

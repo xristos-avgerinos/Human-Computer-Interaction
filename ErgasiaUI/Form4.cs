@@ -416,5 +416,10 @@ namespace ErgasiaUI
         {
 
         }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"helpscribble\imgs\ergasia.chm", HelpNavigator.Topic, "html\\hs12.htm");
+        }
     }
 }

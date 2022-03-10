@@ -58,5 +58,10 @@ namespace ErgasiaUI
         {
             label2.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"helpscribble\imgs\ergasia.chm", HelpNavigator.Topic, "html\\hs19.htm");
+        }
     }
 }

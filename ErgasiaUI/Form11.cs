@@ -20,7 +20,6 @@ namespace ErgasiaUI
 
         private void Form11_Load(object sender, EventArgs e)
         {
-            Program.Activities.Add("STUDY");
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.ImageLocation = "Images/shocaseClosed.png";
@@ -117,6 +116,11 @@ namespace ErgasiaUI
             Form12 form12 = new Form12();
             form12.ShowDialog();
             this.Close();
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"helpscribble\imgs\ergasia.chm", HelpNavigator.Topic, "html\\hs17.htm");
         }
     }
 }

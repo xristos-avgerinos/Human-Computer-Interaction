@@ -169,5 +169,10 @@ namespace ErgasiaUI
                 pictureBox6.ImageLocation = "Images/AutoFeedOff.png";
             }
         }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"helpscribble\imgs\ergasia.chm", HelpNavigator.Topic, "html\\hs20.htm");
+        }
     }
 }
