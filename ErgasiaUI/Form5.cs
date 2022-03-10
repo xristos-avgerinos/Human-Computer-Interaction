@@ -72,5 +72,10 @@ namespace ErgasiaUI
         {
             MessageBox.Show("You have successfully selected a route.");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -62,5 +62,10 @@ namespace ErgasiaUI
                 MessageBox.Show("Item list is empty!");   
             }
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
