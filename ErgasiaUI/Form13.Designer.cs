@@ -29,6 +29,7 @@ namespace ErgasiaUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form13));
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -52,9 +53,10 @@ namespace ErgasiaUI
             this.ClientSize = new System.Drawing.Size(1069, 576);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form13";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form13";
+            this.Text = "Order Receipt";
             this.Load += new System.EventHandler(this.Form13_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
