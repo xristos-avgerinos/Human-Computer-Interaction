@@ -111,7 +111,7 @@ namespace ErgasiaUI
             }
             else if ( dateTimePicker1.Value.TimeOfDay > difference)
             {
-                MessageBox.Show("Activity with estimated time: " + dateTimePicker1.Value.TimeOfDay + "overflows your daily plan");
+                MessageBox.Show("Activity with estimated time: " + dateTimePicker1.Value.TimeOfDay + " overflows your daily plan");
             }
             else
             {
@@ -301,10 +301,16 @@ namespace ErgasiaUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Get Row
-            Control ctrl = (Control)sender;
-            int  row =tableLayoutPanel1.GetRow(ctrl);
-            TableLayoutHelper.RemoveArbitraryRow(tableLayoutPanel1,row);
+
+            DialogResult dialogResult = MessageBox.Show("Do you want to delete this activity from your daily plan?", "Delete Activity", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //Get Row
+                Control ctrl = (Control)sender;
+                int row = tableLayoutPanel1.GetRow(ctrl);
+                TableLayoutHelper.RemoveArbitraryRow(tableLayoutPanel1, row);
+            }          
+            
         }
         public static class TableLayoutHelper
         {
